@@ -1,5 +1,5 @@
 @echo off
-@color 0A 
+@color 0A
 @mode con cp select=936  >nul
 
 if [%1] == [] goto exit
@@ -15,6 +15,7 @@ if [%1] == [run_putty] goto run_putty
 if [%1] == [run_freemind] goto run_freemind
 if [%1] == [run_sftp_net_drive] goto run_sftp_net_drive
 if [%1] == [run_node_shell] goto run_node_shell
+if [%1] == [run_phpstorm] goto run_phpstorm
 
 :services
 start "" "services.msc"
@@ -66,6 +67,10 @@ goto exit
 
 :run_node_shell
 %comspec% /k "C:\nginxstack\use_nginxstack.bat"
+goto exit
+
+:run_phpstorm
+start "" "H:\rover\nodejs\devtools\PhpStorm\bin\PhpStorm.exe"
 goto exit
 
 :exit
