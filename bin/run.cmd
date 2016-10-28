@@ -16,6 +16,11 @@ if [%1] == [run_freemind] goto run_freemind
 if [%1] == [run_sftp_net_drive] goto run_sftp_net_drive
 if [%1] == [run_node_shell] goto run_node_shell
 if [%1] == [run_phpstorm] goto run_phpstorm
+if [%1] == [run_mongovue] goto run_mongovue
+if [%1] == [run_redis_desktop] goto run_redis_desktop
+if [%1] == [run_virtualbox] goto run_virtualbox
+if [%1] == [run_apktool] goto run_apktool
+if [%1] == [run_git_bash] goto run_git_bash
 
 :services
 start "" "services.msc"
@@ -71,6 +76,27 @@ goto exit
 
 :run_phpstorm
 start "" "H:\rover\nodejs\devtools\PhpStorm\bin\PhpStorm.exe"
+goto exit
+
+:run_mongovue
+start "" "C:\nginxstack\MongoVUE\MongoVUE.exe"
+goto exit
+
+:run_redis_desktop
+start "" "C:\nginxstack\RedisDesktopManager\rdm.exe"
+goto exit
+
+:run_virtualbox
+start "" "C:\Program Files\Oracle\VirtualBox\VirtualBox.exe"
+goto exit
+
+:run_apktool
+cd /d "H:\rover\android\Apktool Box\Apktool Box"
+start "" "Apktool.exe"
+goto exit
+
+:run_git_bash
+start "" "C:\Program Files\Git\git-bash.exe"
 goto exit
 
 :exit

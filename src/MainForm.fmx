@@ -14,14 +14,14 @@
     Size.Width = 640.000000000000000000
     Size.Height = 480.000000000000000000
     Size.PlatformDefault = False
-    TabIndex = 4
+    TabIndex = 0
     TabOrder = 0
     TabPosition = PlatformDefault
     object 服务器端: TTabItem
       CustomIcon = <
         item
         end>
-      IsSelected = False
+      IsSelected = True
       Size.Width = 68.000000000000000000
       Size.Height = 24.000000000000000000
       Size.PlatformDefault = False
@@ -44,6 +44,54 @@
         Text = 'install_nginx_service'
         OnClick = btn2Click
       end
+      object btn24: TButton
+        Position.X = 360.000000000000000000
+        Position.Y = 198.000000000000000000
+        Size.Width = 209.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 7
+        Text = 'git bash'
+        OnClick = btn24Click
+      end
+      object btn25: TButton
+        Position.X = 360.000000000000000000
+        Position.Y = 111.000000000000000000
+        Size.Width = 209.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 6
+        Text = 'cygwin bash (Ctrl+F3)'
+      end
+      object btn26: TButton
+        Position.X = 360.000000000000000000
+        Position.Y = 68.000000000000000000
+        Size.Width = 209.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        Text = 'msys2 bash(Alt + F3)'
+      end
+      object btn9: TButton
+        Position.X = 360.000000000000000000
+        Position.Y = 24.000000000000000000
+        Size.Width = 209.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'putty'
+        OnClick = btn9Click
+      end
+      object btn13: TButton
+        Position.X = 360.000000000000000000
+        Position.Y = 155.000000000000000000
+        Size.Width = 209.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 8
+        Text = 'node shell'
+        OnClick = btn13Click
+      end
       object btn3: TButton
         Position.X = 24.000000000000000000
         Position.Y = 96.000000000000000000
@@ -54,13 +102,6 @@
         Text = 'uninstall_nginx_service'
         OnClick = btn3Click
       end
-      object btn9: TButton
-        Position.X = 24.000000000000000000
-        Position.Y = 136.000000000000000000
-        TabOrder = 3
-        Text = 'putty'
-        OnClick = btn9Click
-      end
       object btn12: TButton
         Position.X = 120.000000000000000000
         Position.Y = 136.000000000000000000
@@ -70,13 +111,6 @@
         TabOrder = 4
         Text = #26144#23556#26381#21153#22120#30913#30424
         OnClick = btn12Click
-      end
-      object btn13: TButton
-        Position.X = 408.000000000000000000
-        Position.Y = 72.000000000000000000
-        TabOrder = 5
-        Text = 'node shell'
-        OnClick = btn13Click
       end
     end
     object 数据库: TTabItem
@@ -119,6 +153,20 @@
         Text = 'phpMyAdmin'
         OnClick = btn8Click
       end
+      object btn22: TButton
+        Position.X = 32.000000000000000000
+        Position.Y = 128.000000000000000000
+        TabOrder = 3
+        Text = 'MongoVue'
+        OnClick = btn22Click
+      end
+      object btn23: TButton
+        Position.X = 32.000000000000000000
+        Position.Y = 160.000000000000000000
+        TabOrder = 4
+        Text = 'Redis'
+        OnClick = btn23Click
+      end
     end
     object 桌面编程: TTabItem
       CustomIcon = <
@@ -150,6 +198,65 @@
         Text = #36827#31243#31649#29702#22120
         OnClick = btn7Click
       end
+      object btn21: TButton
+        Position.X = 40.000000000000000000
+        Position.Y = 112.000000000000000000
+        TabOrder = 3
+        Text = 'dbgview'
+      end
+      object GroupBox2: TGroupBox
+        Position.X = 56.000000000000000000
+        Position.Y = 198.000000000000000000
+        Size.Width = 465.000000000000000000
+        Size.Height = 187.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'VC'#39033#30446#36335#24452#36716#25442
+        TabOrder = 4
+        object Edit1: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 5
+          Position.X = 96.000000000000000000
+          Position.Y = 24.000000000000000000
+          Size.Width = 297.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          OnChange = Edit2Change
+        end
+        object Edit2: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 4
+          Position.X = 96.000000000000000000
+          Position.Y = 64.000000000000000000
+          Size.Width = 297.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          OnChange = Edit2Change
+        end
+        object Label1: TLabel
+          Position.X = 16.000000000000000000
+          Position.Y = 27.000000000000000000
+          Text = 'VC'#39033#30446#36335#24452
+        end
+        object Label2: TLabel
+          Position.X = 16.000000000000000000
+          Position.Y = 67.000000000000000000
+          Text = #24211#36335#24452
+        end
+        object Edit3: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 3
+          Position.X = 96.000000000000000000
+          Position.Y = 104.000000000000000000
+          Size.Width = 297.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object Label3: TLabel
+          Position.X = 16.000000000000000000
+          Position.Y = 107.000000000000000000
+          Text = #24211#30456#23545#36335#24452
+        end
+      end
     end
     object TabItem4: TTabItem
       CustomIcon = <
@@ -173,7 +280,7 @@
       CustomIcon = <
         item
         end>
-      IsSelected = True
+      IsSelected = False
       Size.Width = 42.000000000000000000
       Size.Height = 24.000000000000000000
       Size.PlatformDefault = False
@@ -253,7 +360,7 @@
           Position.X = 40.000000000000000000
           Position.Y = 144.000000000000000000
           Size.Width = 40.000000000000000000
-          Size.Height = 16.000000000000000000
+          Size.Height = 18.000000000000000000
           Size.PlatformDefault = False
           TextSettings.WordWrap = False
           Text = #25511#21046#22120
@@ -270,7 +377,7 @@
           Position.X = 40.000000000000000000
           Position.Y = 176.000000000000000000
           Size.Width = 28.000000000000000000
-          Size.Height = 16.000000000000000000
+          Size.Height = 18.000000000000000000
           Size.PlatformDefault = False
           TextSettings.WordWrap = False
           Text = #27169#22411
@@ -280,7 +387,7 @@
           Position.X = 40.000000000000000000
           Position.Y = 216.000000000000000000
           Size.Width = 40.000000000000000000
-          Size.Height = 16.000000000000000000
+          Size.Height = 18.000000000000000000
           Size.PlatformDefault = False
           TextSettings.WordWrap = False
           Text = #25968#25454#34920
@@ -338,7 +445,50 @@
           Text = #36816#34892'Laravel'
           OnClick = btn19Click
         end
+        object btn20: TButton
+          Position.X = 40.000000000000000000
+          Position.Y = 112.000000000000000000
+          TabOrder = 17
+          Text = #36335#30001#21015#34920
+          OnClick = btn20Click
+        end
       end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 62.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Android'
+      object Button2: TButton
+        Position.X = 32.000000000000000000
+        Position.Y = 32.000000000000000000
+        TabOrder = 5
+        Text = 'VirtualBox'
+        OnClick = Button2Click
+      end
+      object Button3: TButton
+        Position.X = 32.000000000000000000
+        Position.Y = 72.000000000000000000
+        TabOrder = 4
+        Text = 'ApkTool'
+        OnClick = Button3Click
+      end
+    end
+    object TabItem3: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 38.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'iOS'
     end
   end
 end
